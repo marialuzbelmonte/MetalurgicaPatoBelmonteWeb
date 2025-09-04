@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metalúrgica</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+
+    <!-- Montserrat desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Glacial Indifference (si la tenés en tu carpeta fonts) -->
+    <style>
+        @font-face {
+            font-family: 'Glacial Indifference';
+            src: url('../fonts/GlacialIndifference-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#banner" class="logo">
+            <img src="../IMG/logo.png" alt="Logo Metalúrgica">
+        </a>
+        <nav>
+            <a href="#servicios">Servicios</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner" id="banner">
+        <h2>
+            <span class="titulo">SOLUCIONES PESADAS</span><br>
+            <span class="subtitulo">para tus necesidades pesadas</span>
+        </h2>
+    </div>
+
+    <!-- Servicios -->
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="cards">
+            <div class="card">Reparación de elásticos</div>
+            <div class="card">Frenos</div>
+            <div class="card">Fabricación de carrocerías</div>
+            <div class="card">Modificación de camiones</div>
+            <div class="card">Colocación de 3 ejes</div>
+            <div class="card">Reemplazo de ejes</div>
+            <div class="card">Agregado de tanques de combustible</div>
+            <div class="card">Colocación y certificación de vinculación</div>
+            <div class="card">Reparación de carrocerías</div>
+            <div class="card">Reparación de suspensión neumática</div>
+            <div class="card">Venta de repuestos</div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="proyectos">
+        <h2>Proyectos Realizados</h2>
+        <div class="filter-btns">
+            <button onclick="filterGallery('all')">Todos</button>
+            <button onclick="filterGallery('estructuras')">Estructuras</button>
+            <button onclick="filterGallery('soldadura')">Soldadura</button>
+        </div>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/300x200?text=Estructura" class="estructuras">
+            <img src="https://via.placeholder.com/300x200?text=Soldadura" class="soldadura">
+            <img src="https://via.placeholder.com/300x200?text=Estructura+2" class="estructuras">
+            <img src="https://via.placeholder.com/300x200?text=Soldadura+2" class="soldadura">
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Tel: (03492) 568922</p>
+        <p>Email: patobelmonte@hotmail.com</p>
+        <p>Ubicación: Sylvestre Begnis 1841</p>
+    </section>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/5493492568922?text=Hola,%20le%20quiero%20hacer%20una%20consulta..." class="whatsapp" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script>
+        // ===== Filtro de galería =====
+        function filterGallery(category) {
+            const items = document.querySelectorAll(".gallery img");
+            items.forEach(item => {
+                if (category === "all" || item.classList.contains(category)) {
+                    item.classList.remove("hidden");
+                } else {
+                    item.classList.add("hidden");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

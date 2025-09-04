@@ -1,0 +1,8 @@
+# Archivos de Visual Studio / Visual Studio Code
+.vs/
+*.vsidx
+
+# Archivos temporales
+*.log
+*.tmp
+*.cache
