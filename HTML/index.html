@@ -3,21 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metalúrgica</title>
+    <title>Metalúrgica Pato Belmonte</title>
     <link rel="stylesheet" href="../CSS/styles.css">
 
     <!-- Montserrat desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
-    <!-- Glacial Indifference (si la tenés en tu carpeta fonts) -->
-    <style>
-        @font-face {
-            font-family: 'Glacial Indifference';
-            src: url('../fonts/GlacialIndifference-Regular.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -27,7 +17,8 @@
         </a>
         <nav>
             <a href="#servicios">Servicios</a>
-            <a href="#proyectos">Proyectos</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Institucional</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
@@ -42,7 +33,7 @@
 
     <!-- Servicios -->
     <section id="servicios">
-        <h2>Nuestros Servicios</h2>
+        <h2>NUESTROS SERVICIOS</h2>
         <div class="cards">
             <div class="card">Reparación de elásticos</div>
             <div class="card">Frenos</div>
@@ -58,47 +49,46 @@
         </div>
     </section>
 
-    <!-- Galería -->
-    <section id="proyectos">
-        <h2>Proyectos Realizados</h2>
-        <div class="filter-btns">
-            <button onclick="filterGallery('all')">Todos</button>
-            <button onclick="filterGallery('estructuras')">Estructuras</button>
-            <button onclick="filterGallery('soldadura')">Soldadura</button>
+    <!-- Productos -->
+    <section id="productos">
+        <h2>NUESTROS PRODUCTOS</h2>
+        <div class="cards">
+            <div class="card">Amortiguadores</div>
+            <div class="card">Llantas</div>
+            <div class="card">Pulmones</div>
+            <div class="card">Elásticos</div>
+            <div class="card">Pulmones</div>
+            <div class="card">ETC</div>
+            <div class="card">ETC</div>
+            <div class="card">ETC</div>
+            <div class="card">ETC</div>
         </div>
-        <div class="gallery">
-            <img src="https://via.placeholder.com/300x200?text=Estructura" class="estructuras">
-            <img src="https://via.placeholder.com/300x200?text=Soldadura" class="soldadura">
-            <img src="https://via.placeholder.com/300x200?text=Estructura+2" class="estructuras">
-            <img src="https://via.placeholder.com/300x200?text=Soldadura+2" class="soldadura">
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros">
+        <h2>INSTITUCIONAL</h2>
+        <div class="filter-btns">
+            <button onclick="filterGallery('historia')">Nuestra historia</button>
+            <button onclick="filterGallery('estructuras')">Nuestras instalaciones</button>
+            <button onclick="filterGallery('soldadura')">Misión y visión</button>
         </div>
     </section>
 
     <!-- Contacto -->
     <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Tel: (03492) 568922</p>
-        <p>Email: patobelmonte@hotmail.com</p>
-        <p>Ubicación: Sylvestre Begnis 1841</p>
+        <div class="contacto-contenedor">
+            <h2>CONTACTO</h2>
+            <p>Tel: (03492) 568922</p>
+            <p>Email: patobelmonte@hotmail.com</p>
+            <p>Ubicación: Sylvestre Begnis 1841</p>
+        </div>
     </section>
+
 
     <!-- Botón WhatsApp -->
     <a href="https://wa.me/5493492568922?text=Hola,%20le%20quiero%20hacer%20una%20consulta..." class="whatsapp" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
-
-    <script>
-        // ===== Filtro de galería =====
-        function filterGallery(category) {
-            const items = document.querySelectorAll(".gallery img");
-            items.forEach(item => {
-                if (category === "all" || item.classList.contains(category)) {
-                    item.classList.remove("hidden");
-                } else {
-                    item.classList.add("hidden");
-                }
-            });
-        }
-    </script>
 </body>
 </html>
