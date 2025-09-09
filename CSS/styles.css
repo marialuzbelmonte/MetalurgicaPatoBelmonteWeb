@@ -105,6 +105,7 @@ nav a:hover {
 section {
     padding: 6rem 2rem;
     text-align: center;
+    justify-content: center
 }
 
 section h2 {
@@ -115,40 +116,47 @@ section h2 {
 
 /* ===== Carrusel (Servicios y Productos) ===== */
 .cards {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-    padding: 1rem;
-    scroll-behavior: smooth;
-}
-
-.cards::-webkit-scrollbar {
-    height: 8px;
-}
-
-.cards::-webkit-scrollbar-thumb {
-    background: #1f2937;
-    border-radius: 4px;
-}
-
-.cards::-webkit-scrollbar-track {
-    background: #ddd;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
 }
 
 .card {
-    min-width: 250px;
-    flex: 0 0 auto;
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Centrar contenidos dentro de la card */
+    display: flex;
+    flex-direction: column; /* icono arriba, texto abajo */
+    align-items: center; /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente */
+    text-align: center;
 }
 
+
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
+
+.card .icono {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem auto;
+    border-radius: 50%;
+    background: #0D638B; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .icono img {
+    max-width: 95%; /* ajusta tamaño dentro del círculo */
+    max-height: 95%;
+}
+
 
 /* ===== Botones de filtro ===== */
 .filter-btns button {
@@ -165,24 +173,6 @@ section h2 {
 .filter-btns button:hover {
     background: #00B4CB;
     color: #1f2937;
-}
-
-/* ===== Galería ===== */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.gallery img {
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-}
-
-.hidden {
-    display: none;
 }
 
 /* ===== Botón WhatsApp ===== */
@@ -247,6 +237,59 @@ section h2 {
         padding: 1rem;
     }
 }
+
+/* Carrusel */
+#carrusel {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Botones */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+    .prev:hover, .next:hover {
+        background: rgba(0,0,0,0.8);
+    }
+
 
 /* ===== Contacto ===== */
 #contacto {

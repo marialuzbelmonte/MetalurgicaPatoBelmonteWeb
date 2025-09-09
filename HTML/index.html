@@ -8,6 +8,9 @@
 
     <!-- Montserrat desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -25,7 +28,7 @@
 
     <!-- Banner -->
     <div class="banner" id="banner">
-        <h2>
+        <h2 data-aos="fade-up">
             <span class="titulo">SOLUCIONES PESADAS</span><br>
             <span class="subtitulo">para tus necesidades pesadas</span>
         </h2>
@@ -33,40 +36,95 @@
 
     <!-- Servicios -->
     <section id="servicios">
-        <h2>NUESTROS SERVICIOS</h2>
+        <h2 data-aos="fade-up">SERVICIOS</h2>
         <div class="cards">
-            <div class="card">Reparación de elásticos</div>
-            <div class="card">Frenos</div>
-            <div class="card">Fabricación de carrocerías</div>
-            <div class="card">Modificación de camiones</div>
-            <div class="card">Colocación de 3 ejes</div>
-            <div class="card">Reemplazo de ejes</div>
-            <div class="card">Agregado de tanques de combustible</div>
-            <div class="card">Colocación y certificación de vinculación</div>
-            <div class="card">Reparación de carrocerías</div>
-            <div class="card">Reparación de suspensión neumática</div>
-            <div class="card">Venta de repuestos</div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="0">
+                <div class="icono"><img src="../IMG/Iconos/iconoelastico.svg" alt="elastico"></div>
+                <p>Reparación de elásticos</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icono"><img src="../IMG/Iconos/iconofreno.svg" alt="freno"></div>
+                <p>Frenos</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <div class="icono"><img src="../IMG/Iconos/iconocarroceria.svg" alt="carroceria"></div>
+                <p>Fabricación y reparación de carrocerías</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <div class="icono"><img src="../IMG/Iconos/iconomodificacion.svg" alt="modificacion"></div>
+                <p>Modificación de camiones</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="500">
+                <div class="icono"><img src="../IMG/Iconos/iconoeje.svg" alt="eje"></div>
+                <p>Reemplazo de ejes</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="600">
+                <div class="icono"><img src="../IMG/Iconos/iconocombustible.svg" alt="combustible"></div>
+                <p>Agregado de tanque y mochila de combustible</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="700">
+                <div class="icono"><img src="../IMG/Iconos/iconocertificacion.svg" alt="certificacion"></div>
+                <p>Colocación y certificación de vinculación</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="900">
+                <div class="icono"><img src="../IMG/Iconos/iconosuspension.svg" alt="suspension"></div>
+                <p>Reparación y colocación de suspensión neumática</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="1000">
+                <div class="icono"><img src="../IMG/Iconos/iconoventarepuestos.svg" alt="combustible"></div>
+                <p>Venta de repuestos</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="1000">
+                <div class="icono"><img src="../IMG/Iconos/iconomodificacioncarroceria.svg" alt="modifcarroceria"></div>
+                <p>Alargue de chasis</p>
+            </div>
+
         </div>
     </section>
 
+
     <!-- Productos -->
-    <section id="productos">
-        <h2>NUESTROS PRODUCTOS</h2>
+    <section id="productos" data-aos="fade-up">
+        <h2>PRODUCTOS</h2>
         <div class="cards">
-            <div class="card">Amortiguadores</div>
-            <div class="card">Llantas</div>
-            <div class="card">Pulmones</div>
-            <div class="card">Elásticos</div>
-            <div class="card">Pulmones</div>
-            <div class="card">ETC</div>
-            <div class="card">ETC</div>
-            <div class="card">ETC</div>
-            <div class="card">ETC</div>
+            <div class="card" data-aos="flip-left">Amortiguadores</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Llantas</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="200">Pulmones</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="300">Elásticos</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Grampas de elástico</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="400">Balancines</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="500">Tensores</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="600">Registros de freno</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Crucetas</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Cintas de freno</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Pastillas de freno</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Bulones de rueda</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Cosmética vehicular</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Fuelles de suspensión neumática</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Diafragmas</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Barras de dirección</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Extremos de dirección</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Bujes de balancín</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Guardabarros</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Amortiguadores</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Retenes de rueda</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">Rodamientos de rueda</div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">y más...</div>
         </div>
     </section>
 
     <!-- Nosotros -->
-    <section id="nosotros">
+    <section id="nosotros" data-aos="fade-up">
         <h2>INSTITUCIONAL</h2>
         <div class="filter-btns">
             <button onclick="filterGallery('historia')">Nuestra historia</button>
@@ -75,8 +133,30 @@
         </div>
     </section>
 
+    <section id="carrusel">
+        <h2>MARCAS</h2>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="../IMG/Marcas/logo_boero_a.png" alt="Boero">
+                <img src="../IMG/Marcas/logo_porpora.png" alt="Porpora">
+                <img src="../IMG/Marcas/logo_sach.png" alt="Sachs">
+                <img src="../IMG/Marcas/logo_rg.png" alt="RG">
+                <img src="../IMG/Marcas/logo_montibal.png" alt="Montibal">
+                <img src="../IMG/Marcas/logo_asichapng.png" alt="Asicha">
+                <img src="../IMG/Marcas/logo_triler.png" alt="Triler">
+                <img src="../IMG/Marcas/logo_cobrec.png" alt="Cobrec">
+                <img src="../IMG/Marcas/logo_sabo.png" alt="Sabo">
+                <img src="../IMG/Marcas/logo_lumamec.jpg" alt="Lumamec">
+            </div>
+            <!-- Botones -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+
     <!-- Contacto -->
-    <section id="contacto">
+    <section id="contacto" data-aos="fade-up">
         <div class="contacto-contenedor">
             <h2>CONTACTO</h2>
             <p>Tel: (03492) 568922</p>
@@ -85,10 +165,42 @@
         </div>
     </section>
 
-
     <!-- Botón WhatsApp -->
-    <a href="https://wa.me/5493492568922?text=Hola,%20le%20quiero%20hacer%20una%20consulta..." class="whatsapp" target="_blank">
+    <a href="https://wa.me/5493492568922?text=Hola,%20le%20quiero%20consultar%20por..." class="whatsapp" target="_blank" data-aos="fade-up">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // duración animación en ms
+            once: true      // animación solo una vez
+        });
+    </script>
+
+    <script>
+        const slide = document.querySelector('.carousel-slide');
+        const images = document.querySelectorAll('.carousel-slide img');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+
+        let counter = 0;
+
+        function showSlide(index) {
+            if (index >= images.length) counter = 0;
+            else if (index < 0) counter = images.length - 1;
+            else counter = index;
+
+            slide.style.transform = `translateX(${-counter * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => showSlide(counter + 1));
+        prevBtn.addEventListener('click', () => showSlide(counter - 1));
+
+        // Auto-play cada 5 segundos
+        setInterval(() => showSlide(counter + 1), 5000);
+    </script>
+
 </body>
 </html>
