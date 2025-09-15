@@ -22,17 +22,27 @@
             <a href="#servicios">Servicios</a>
             <a href="#productos">Productos</a>
             <a href="#nosotros">Institucional</a>
+            <a href="#marcas">Marcas</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <!-- Banner -->
+    <!-- Banner con video -->
     <div class="banner" id="banner">
-        <h2 data-aos="fade-up">
-            <span class="titulo">SOLUCIONES PESADAS</span><br>
-            <span class="subtitulo">para tus necesidades pesadas</span>
-        </h2>
+        <video autoplay muted loop playsinline class="video-fondo">
+            <source src="../IMG/video_drone.MP4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+
+        <div class="contenido">
+            <h2 data-aos="fade-up">
+                <span class="titulo">SOLUCIONES PESADAS</span><br>
+                <span class="subtitulo">para tus necesidades pesadas</span>
+            </h2>
+        </div>
     </div>
+
 
     <!-- Servicios -->
     <section id="servicios">
@@ -127,26 +137,26 @@
     <section id="nosotros" data-aos="fade-up">
         <h2>INSTITUCIONAL</h2>
         <div class="filter-btns">
-            <button onclick="filterGallery('historia')">Nuestra historia</button>
-            <button onclick="filterGallery('estructuras')">Nuestras instalaciones</button>
-            <button onclick="filterGallery('soldadura')">Misión y visión</button>
+            <a href="historia.html"><button>Nuestra historia</button></a>
+            <a href="instalaciones.html"><button>Nuestras instalaciones</button></a>
+            <a href="misionvision.html"><button>Misión y visión</button></a>
         </div>
     </section>
 
-    <section id="carrusel">
-        <h2>MARCAS</h2>
+    <section id="marcas" data-aos="fade-up">
+        <h2>MARCAS CON LAS QUE TRABAJAMOS</h2>
         <div class="carousel-container">
             <div class="carousel-slide">
                 <img src="../IMG/Marcas/logo_boero_a.png" alt="Boero">
-                <img src="../IMG/Marcas/logo_porpora.png" alt="Porpora">
-                <img src="../IMG/Marcas/logo_sach.png" alt="Sachs">
-                <img src="../IMG/Marcas/logo_rg.png" alt="RG">
-                <img src="../IMG/Marcas/logo_montibal.png" alt="Montibal">
-                <img src="../IMG/Marcas/logo_asichapng.png" alt="Asicha">
-                <img src="../IMG/Marcas/logo_triler.png" alt="Triler">
-                <img src="../IMG/Marcas/logo_cobrec.png" alt="Cobrec">
+                <img src="../IMG/Marcas/logo_sachs.png" alt="Sachs">
+                <img src="../IMG/Marcas/logo_asicha.png" alt="Asicha">
+                <img src="../IMG/Marcas/logo_cobreq.png" alt="Cobrec">
                 <img src="../IMG/Marcas/logo_sabo.png" alt="Sabo">
-                <img src="../IMG/Marcas/logo_lumamec.jpg" alt="Lumamec">
+                <img src="../IMG/Marcas/logo_lumamec.png" alt="Lumamec">
+                <img src="../IMG/Marcas/logo_rg.png" alt="RG">
+                <img src="../IMG/Marcas/logo_porpora.png" alt="Porpora">
+                <img src="../IMG/Marcas/logo_montibal.png" alt="Montibal">
+                <img src="../IMG/Marcas/logo_triler.png" alt="Triler">
             </div>
             <!-- Botones -->
             <button class="prev">&#10094;</button>
@@ -198,8 +208,8 @@
         nextBtn.addEventListener('click', () => showSlide(counter + 1));
         prevBtn.addEventListener('click', () => showSlide(counter - 1));
 
-        // Auto-play cada 5 segundos
-        setInterval(() => showSlide(counter + 1), 5000);
+        // Auto-play cada 10 segundos
+        setInterval(() => showSlide(counter + 1), 10000);
     </script>
 
 </body>

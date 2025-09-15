@@ -58,6 +58,7 @@ nav a:hover {
 
 /* ===== Banner ===== */
 .banner {
+    position: relative; /* necesario para posicionar el video */
     height: 100vh;
     display: flex;
     align-items: center;
@@ -65,12 +66,31 @@ nav a:hover {
     text-align: center;
     padding: 2rem;
     margin-top: 80px; /* deja espacio por el header fijo */
+    overflow: hidden; /* oculta lo que se salga del contenedor */
+}
+
+/* Video de fondo */
+.banner .video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* rellena sin deformar */
+    z-index: -1; /* queda detrás del contenido */
+}
+
+/* Contenido sobre el video */
+.banner .contenido {
+    position: relative;
+    z-index: 1; /* asegura que el texto quede arriba */
 }
 
 .banner h2 {
     padding: 2rem;
     border-radius: 10px;
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 2s ease-in-out, fadeOut 2s ease-in-out 5s forwards;
+    /* fadeIn dura 2s, fadeOut empieza a los 5s */
     line-height: 1.3;
 }
 
@@ -88,16 +108,17 @@ nav a:hover {
     color: #0D638B;
     text-transform: lowercase;
 }
-
-@keyframes fadeIn {
+   
+/*Animacion*/ 
+@keyframes fadeOut {
     from {
-        opacity: 0;
-        transform: translateY(30px);
+        opacity: 1;
+        transform: translateY(0);
     }
 
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 0;
+        transform: translateY(-30px);
     }
 }
 
@@ -117,7 +138,7 @@ section h2 {
 /* ===== Carrusel (Servicios y Productos) ===== */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
     text-align: center;
@@ -134,7 +155,6 @@ section h2 {
     justify-content: center; /* centra verticalmente */
     text-align: center;
 }
-
 
 .card:hover {
     transform: translateY(-8px);
@@ -161,7 +181,8 @@ section h2 {
 /* ===== Botones de filtro ===== */
 .filter-btns button {
     margin: 0.5rem;
-    padding: 0.6rem 1.2rem;
+    padding: 1rem 2rem; /* aumenté el padding */
+    font-size: 1.1rem; /* tamaño de letra un poco más grande */
     border: none;
     border-radius: 5px;
     background: #1f2937;
@@ -259,9 +280,12 @@ section h2 {
 }
 
 .carousel-slide img {
-    width: 100%;
-    height: 100%;
+    flex: 0 0 25%; /* 4 imágenes visibles (100 / 4) */
+    max-width: 100%;
+    height: 160px;
     border-radius: 10px;
+    object-fit: contain;
+    margin: 10px;
 }
 
 /* Botones */
@@ -286,10 +310,9 @@ section h2 {
     right: 10px;
 }
 
-    .prev:hover, .next:hover {
-        background: rgba(0,0,0,0.8);
-    }
-
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+}
 
 /* ===== Contacto ===== */
 #contacto {
@@ -314,3 +337,165 @@ section h2 {
     font-size: 0.8rem;
     color: #333;
 }
+
+/* ===== Sección Misión y Visión ===== */
+.mision-vision {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mision-vision .section-title {
+    margin-top: 4rem; /* empuja hacia abajo */
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0D638B;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    color: #0D638B;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* ===== Sección Historia ===== */
+.historia {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.historia .section-title {
+    margin-top: 4rem; /* empuja hacia abajo */
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0D638B;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ===== Sección Instalaciones ===== */
+.instalaciones {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.instalaciones .section-title {
+    margin-top: 4rem; /* empuja hacia abajo */
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0D638B;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    margin-bottom: 1.5em; /* aumenta el espacio entre párrafos */
+}
+
+.card p {
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 0 10px; /* opcional: para evitar que el texto toque los bordes */
+}
+
+/* ===== Sección Instalaciones ===== */
+/* Texto introductorio más angosto */
+.instalaciones > p {
+    max-width: 800px; /* límite de ancho */
+    margin: 0 auto 3rem auto; /* centrado y con espacio abajo */
+    line-height: 1.6; /* más aire entre líneas */
+    font-size: 1.1rem; /* un poquito más grande */
+    color: #333;
+}
+
+/* Separación extra entre la galería y "Compromiso con la excelencia" */
+.instalaciones .about {
+    margin-top: 4rem; /* espacio arriba */
+    max-width: 900px; /* que no ocupe todo el ancho */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Galería con grid responsivo */
+.gallery .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cada tarjeta de imagen */
+.gallery .card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden; /* recorta bordes */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Ajuste de imágenes */
+.gallery .card img {
+    width: 100%;
+    height: 250px; /* altura fija para que no sean gigantes */
+    object-fit: cover; /* recorta y mantiene proporción */
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .gallery .card img {
+        height: 200px; /* más bajas en celular */
+    }
+}
+
