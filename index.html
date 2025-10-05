@@ -13,12 +13,22 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <header class="header">
         <a href="#banner" class="logo">
             <img src="IMG/logo.png" alt="Logo Metalúrgica">
         </a>
-        <nav>
+
+        <!-- Checkbox oculto que controla el menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- Ícono de hamburguesa -->
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav">
             <a href="#servicios">Servicios</a>
             <a href="#productos">Productos</a>
             <a href="#nosotros">Institucional</a>
@@ -26,6 +36,7 @@
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
+
 
     <!-- Banner -->
     <!-- Banner con video -->
