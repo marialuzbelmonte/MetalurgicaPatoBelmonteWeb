@@ -15,16 +15,28 @@
 <body>
 
     <!-- Header -->
-    <header>
+    <!-- Header -->
+    <header class="header">
         <a href="index.html#banner" class="logo">
             <img src="IMG/logo.png" alt="Logo Metalúrgica">
         </a>
-        <nav>
-            <a href="index.html#servicios">Servicios</a>
-            <a href="index.html#productos">Productos</a>
-            <a href="index.html#nosotros">Institucional</a>
-            <a href="index.html#marcas">Marcas</a>
-            <a href="index.html#contacto">Contacto</a>
+
+        <!-- Checkbox oculto que controla el menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- Ícono de hamburguesa -->
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav">
+            <a href="#servicios">Servicios</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Institucional</a>
+            <a href="#marcas">Marcas</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
@@ -43,7 +55,7 @@
                     responsabilidad y atención personalizada.Metalúrgica Pato Belmonte nació con la pasión de transformar la experiencia de los transportistas, entendiendo que detrás de cada camión hay familias, trabajo y esfuerzo que no pueden detenerse.
                 </p>
 
-                <p> 
+                <p>
 
                     Con el tiempo, fuimos creciendo, incorporando nuevas herramientas, conocimientos y un equipo cada vez más especializado. Hoy contamos con un taller preparado para dar soluciones rápidas y eficaces, desde reparaciones estructurales hasta la colocación de repuestos certificados.
                 </p>
